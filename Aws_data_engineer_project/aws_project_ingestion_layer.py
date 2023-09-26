@@ -1,16 +1,16 @@
 # Databricks notebook source
-spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.access.key", "AKIA5GJNPBRVG3DKGSUM")
-spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.secret.key", "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")
+spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.access.key", "AKIA5GJNPBRVG3DKGXXX")
+spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.secret.key", "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")
 
 # COMMAND ----------
 
 emp_df = (spark.read
   .format("mysql")
   .option("host", "employeedb.cldxwxtiffdp.us-east-1.rds.amazonaws.com")
-  .option("port", 3306)
+  .option("port", 33XX)
   .option("database", "emp_db")
-  .option("user", "user12345")
-  .option("password", "password12345")
+  .option("user", "XXXX12345")
+  .option("password", "XXXXXX12345")
   .option("dbtable", "emp")
   .load()
 )
@@ -24,8 +24,8 @@ dept_df = (spark.read
   .option("host", "employeedb.cldxwxtiffdp.us-east-1.rds.amazonaws.com")
   .option("port", 3306)
   .option("database", "emp_db")
-  .option("user", "user12345")
-  .option("password", "password12345")
+  .option("user", "XXXX12345")
+  .option("password", "XXXXXX12345")
   .option("dbtable", "dept")
   .load()
 )
